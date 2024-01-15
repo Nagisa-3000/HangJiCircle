@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp">
+
+    <LinearLayout
+        android:id="@+id/inputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/register_name_hint"
+            android:maxLength="11"
+            android:textSize="15sp" />
+        <EditText
+            android:id="@+id/phone_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/register_account_hint"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/password_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/register_password_hint"
+            android:inputType="textPassword"
+            android:maxLength="32"
+            android:textSize="15sp" />
+        <EditText
+            android:id="@+id/repassword_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/register_repassword_hint"
+            android:inputType="textPassword"
+            android:maxLength="32"
+            android:textSize="15sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/test_code"
+                android:layout_width="258dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/register_test_hint" />
+
+            <Button
+                android:id="@+id/get_test_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/get_test_bt" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputText">
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorButton"
+            android:text="@string/confirm_register"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/colorFont"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/cancel_register_button"
+
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorButton"
+            android:text="@string/cancel_register"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/colorFont"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/login_background"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+    <LinearLayout
+        android:id="@+id/inputText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/phone_hint"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/password_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:maxLength="32"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/checkbox_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputText">
+
+        <CheckBox
+            android:id="@+id/remenber_password"
+            android:textColor="@color/colorFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="记住密码" />
+
+        <CheckBox
+            android:id="@+id/login_auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:textColor="@color/colorFont"
+            android:text="自动登录" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkbox_option">
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorButton"
+            android:text="@string/action_login"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/colorFont"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorButton"
+            android:text="@string/action_register"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/colorFont"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+</RelativeLayout>

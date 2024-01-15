@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/title_bar_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_dynamic_neutral_variant70"
+        android:elevation="4dp">
+
+        <!-- 标题文本 -->
+        <TextView
+            android:id="@+id/post_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="找校园卡"
+            android:textColor="#000"
+            android:textSize="20sp" />
+
+        <!-- 返回按钮 -->
+        <Button
+            android:id="@+id/btn_back_to_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="?attr/selectableItemBackground"
+            android:text="返回" />
+    </RelativeLayout>
+
+    <!-- 帖子内容 -->
+    <ScrollView
+        android:id="@+id/scroll_view_post_content"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/title_bar_detail">
+        <LinearLayout
+            android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/post_context"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="16sp" />
+        <!-- 动态添加图片 -->
+            <LinearLayout
+                android:id="@+id/post_image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!-- 点赞数和图标 -->
+    <LinearLayout
+        android:id="@+id/like_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scroll_view_post_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/like_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/baseline_thumb_up_off_alt_24" /> <!-- 使用安卓内置的点赞（星标）图标 -->
+
+        <TextView
+            android:id="@+id/like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" /> <!-- 点赞数 -->
+    </LinearLayout>
+    <!-- 评论列表 -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout_post"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/like_section">
+        <ListView
+            android:id="@+id/comments_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/comment_input_section"
+            android:layout_below="@id/like_section" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <!-- 评论输入区 -->
+    <LinearLayout
+        android:id="@+id/comment_input_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#EEE"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- 输入框 -->
+        <EditText
+            android:id="@+id/comment_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:drawable/edit_text"
+            android:hint="请输入评论..." />
+
+        <!-- 发送按钮 -->
+        <Button
+            android:id="@+id/btn_send_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送" />
+    </LinearLayout>
+
+</RelativeLayout>

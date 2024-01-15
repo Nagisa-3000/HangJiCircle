@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        tools:ignore="Suspicious0dp">
+    </FrameLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <RadioButton
+            android:id="@+id/rb_main_communicate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/main_bottom_bg_selector"
+            android:textColor="@color/main_bottom_textcolor_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:drawableTop="@android:drawable/ic_menu_share"
+            android:text="@string/community"
+            android:textSize="12sp"
+            android:drawablePadding="4dp"/>
+
+        <RadioButton
+            android:id="@+id/rb_main_market"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/main_bottom_bg_selector"
+            android:textColor="@color/main_bottom_textcolor_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:drawableTop="@android:drawable/ic_menu_search"
+            android:text="@string/market"
+            android:textSize="12sp"
+            android:drawablePadding="4dp"/>
+
+        <RadioButton
+            android:id="@+id/rb_main_setting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/main_bottom_bg_selector"
+            android:textColor="@color/main_bottom_textcolor_selector"
+            android:button="@null"
+            android:gravity="center"
+            android:drawableTop="@android:drawable/ic_menu_myplaces"
+            android:text="个人"
+            android:textSize="12sp"
+            android:drawablePadding="4dp"/>
+    </RadioGroup>
+</LinearLayout>
